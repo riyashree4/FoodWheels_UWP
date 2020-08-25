@@ -22,7 +22,7 @@
                 DisplayMode="CompactInline"
                 IsPaneOpen="False"
            
-               OpenPaneLength="252">
+               OpenPaneLength="250">
 
                 <SplitView.Pane>
                     <Grid Background="{StaticResource MenuBackground}">
