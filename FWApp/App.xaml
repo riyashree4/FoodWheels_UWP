@@ -1,0 +1,39 @@
+﻿<Application
+    x:Class="FWApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FWApp" RequestedTheme="Light">
+    <Application.Resources>
+        <Style x:Key="IconButton" TargetType="Button">
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="Margin" Value="4"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+
+        <Style x:Key="MenuIconButton" TargetType="Button" BasedOn="{StaticResource IconButton}">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style x:Key="PaneIconButton" TargetType="Button" BasedOn="{StaticResource MenuIconButton}">
+            <Setter Property="Width" Value="320"/>
+        </Style>
+
+        <Style x:Key="PaneIconButtonText" TargetType="TextBlock">
+            <Setter Property="Margin" Value="16,0,0,0"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+
+        <Color x:Key="MenuBackgroundColor">#696969</Color>
+        <SolidColorBrush x:Key="MenuBackground" Color="{StaticResource MenuBackgroundColor}"/>
+        <Color x:Key="EdgingColor">#303030</Color>
+        <Color x:Key="EdgingContrastColor">White</Color>
+        <SolidColorBrush x:Key="Edging" Color="{StaticResource EdgingColor}"/>
+        <SolidColorBrush x:Key="EdgingContrast" Color="{StaticResource EdgingContrastColor}"/>
+
+
+
+    </Application.Resources>
+</Application>

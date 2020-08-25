@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="FWApp.Pages.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FWApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Style="{StaticResource IconButton}" Click="Button_Click">
+                    <FontIcon Margin="0" FontFamily="Segoe MDL2 Assets" Glyph="&#xE72C;"/>
+
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Tapped="Grid_Tapped">
+            <StackPanel Margin="8" BorderBrush="{StaticResource Edging}" BorderThickness="2">
+                <Image Margin="8" x:Name="Pic" Width="224" Height="126" Stretch="Uniform" Source="/Assets/Square150x150Logo.scale-200.png"/>
+                <TextBlock x:Name="Title" Margin="8" Text="Name of Truck" Style="{StaticResource TitleTextBlockStyle}"/>
+                <TextBlock Margin="8" Grid.Row ="2" Text="5" />
+                <TextBlock x:Name="PoenHours" Margin="8" Text="10:00-12:00" Style="{StaticResource BaseTextBlockStyle}"/>
+            </StackPanel>
+            
+        </Grid>
+        
+    </Grid>
+</Page>

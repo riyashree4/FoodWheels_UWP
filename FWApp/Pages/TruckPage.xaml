@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="FWApp.Pages.TruckPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FWApp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ScrollViewer>
+            <Grid>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Margin="10" Grid.Row="0">
+                        <Image Margin="8" x:Name="Pic" Width="240" Height="135" Stretch="Uniform" Source="/Assets/Square150x150Logo.scale-200.png"/>
+                        <TextBlock x:Name="Title" Margin="8" Text="Name of Truck" Style="{StaticResource TitleTextBlockStyle}"/>
+                        <Grid x:Name="Rating" Grid.Row ="2" Width="240">
+                            <TextBlock Text="5"/>
+                        </Grid>
+
+                        <StackPanel x:Name="OpeningHours" Margin="8" BorderBrush="{StaticResource Edging}" BorderThickness="2">
+                            <TextBlock x:Name="OpeningsTitle" Margin="8" Text="Opening times:"/>
+                            <TextBlock Margin="8" Text="10:00-12:00..."/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel x:Name="Buttons" Orientation="Horizontal" Margin="12" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                        <Button Style="{StaticResource IconButton}">
+                            <Grid>
+                                <FontIcon Margin="0" FontFamily="Segoe MDL2 Assets" Glyph="&#xE734;"/>
+                                <!--<FontIcon Margin="0" FontFamily="Segoe MDL2 Assets" Glyph="&#xE735;"/>-->
+                            </Grid>
+                        </Button>
+                    </StackPanel>
+
+                    <Grid Grid.Row="1" Margin="8">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Width="320" Height="180">
+                            <Image Source="/Assets/Square150x150Logo.scale-200.png" HorizontalAlignment="Center"/>
+                        </Grid>
+                        <TextBlock Grid.Row="1" Margin="0,4,0,0" Text="Name of Food item" TextWrapping="Wrap"/>
+                    </Grid>
+                </Grid>
+
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>
